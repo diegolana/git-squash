@@ -10,5 +10,9 @@ fi
 qtd=$(git rev-list --no-merges --count $older..$current)
 git rebase -i HEAD~$qtd
 
+echo "#############"
 echo "Make sure that everything is OK then run the following command:"
-echo "git push origin $current --force"
+echo "$ git push origin $current --force"
+echo "Ask yout coworker to run the following command:"
+echo "$ git reset --hard origin/$current"
+echo "#############"
